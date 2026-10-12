@@ -1,0 +1,13 @@
+void Oil(Image &work_on)
+{
+    for (int i = 0; i < work_on.height; i++)
+    {
+        for (int j = 0; j < work_on.width; j++)
+        {
+            for (int k = 0; k < work_on.channels; k++)
+            {
+                work_on(j, i, k) = 24 * round(work_on(j, i, k) / 25);
+            }
+        }
+    }
+}
